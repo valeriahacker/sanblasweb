@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="gn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>San Blas | Paraguay — Fe y Tradición</title>
+
+    <!-- Fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#inicio"
+          ><i class="fas fa-feather-alt"></i>
+          <span data-i18n="nav-inicio">Ñepyrũ</span></a
+        >
+        <a href="#historia"
+          ><i class="fas fa-history"></i>
+          <span data-i18n="nav-historia">Tembiasakue</span></a
+        >
+        <a href="#paraguay"
+          ><i class="fas fa-map-marked-alt"></i>
+          <span data-i18n="nav-paraguay">Paraguay</span></a
+        >
+        <a href="#tradicion"
+          ><i class="fas fa-hands-praying"></i>
+          <span data-i18n="nav-teko">Teko</span></a
+        >
+
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="gn">🇵🇾 Guarani</button>
+          <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+        </div>
+      </div>
+    </nav>
+
+    <header id="inicio" class="hero">
+      <div class="hero-content">
+        <br>
+        <br>
+        <h1>San Blas</h1>
+        <div class="sub" data-i18n="hero-sub">
+          Ñande Paraguay retã ruvicha marangatu ha ñe'ẽ ruguá ñangarekoha
+        </div>
+
+        <!-- Audio narrado principal (único) -->
+        <div class="audio-sacred">
+          <div class="audio-label">
+            <i class="fas fa-microphone-alt"></i>
+            <span data-i18n="audio-title">Narración oral · Ñe'ẽ ry</span>
+            <i class="fas fa-ear-listen"></i>
+          </div>
+          <p data-i18n="audio-desc">
+            🎧 Escuchá la historia de San Blas si no sabés leer. Purahéi oñe'ẽva
+            ha'e rehegua.
+          </p>
+          <audio controls preload="metadata">
+            <source
+              src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+              type="audio/mpeg"
+            />
+            Tu navegador no soporta audio.
+          </audio>
+          <p style="font-size: 0.7rem; margin-top: 10px; opacity: 0.7">
+            <i class="fas fa-dove"></i>
+            <span data-i18n="audio-foot"
+              >Ñe'ẽnga oñe'ẽva tapicha ndaikuaaiva moñe'ẽ pe guarã</span
+            >
+          </p>
+        </div>
+
+        <div class="ribbon-symbol">
+          <span></span>
+          <small data-i18n="cinta-text"
+            >Cinta pytã · Símbolo de protección</small
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- SECCIÓN HISTORIA -->
+    <section id="historia" class="section fade-scroll">
+      <h2 class="section-title" data-i18n="historia-title">
+        Tembiasakue · Raíz viva
+      </h2>
+      <div class="grid-sublime">
+        <div class="card-luxe">
+          <div class="card-icon"><i class="fas fa-cross"></i></div>
+          <p data-i18n="historia-card1">
+            San Blas ha’e peteĩ pohãnohára ha pa’i guasu Armenia-pe. Oipytyvõ
+            heta tapicha ha mymba hasývape, ijeroviáre.
+          </p>
+        </div>
+        <div class="card-luxe">
+          <div class="card-icon"><i class="fas fa-fish"></i></div>
+          <p data-i18n="historia-card2">
+            Ojekuaa chupe oñangareko haguére peteĩ mitã’i ojejopyva pira
+            kanguére. Upévare ha’e ñe’ẽ ruguá ñangarekoha.
+          </p>
+        </div>
+        <div class="card-luxe">
+          <div class="card-icon"><i class="fas fa-crown-of-thorns"></i></div>
+          <p data-i18n="historia-card3">
+            Omano ijerovia rehehápe, ohasa asy rire, ha oiko santo tuicháva
+            kristiano-kuérape.
+          </p>
+        </div>
+      </div>
+      <div class="quote-gold">
+        <i
+          class="fas fa-quote-left"
+          style="color: #d4af37; margin-right: 8px"
+        ></i>
+        <span data-i18n="historia-quote"
+          >San Blas pytyvõ ohóva ha ogueru esperanza, ipópe oguereko poguy
+          marangatu.</span
+        >
+      </div>
+    </section>
+
+    <!-- SECCIÓN PARAGUAY -->
+    <section id="paraguay" class="section fade-scroll">
+      <h2 class="section-title" data-i18n="paraguay-title">
+        Paraguay retãme · Mombe'urã
+      </h2>
+      <div class="grid-sublime">
+        <div class="card-luxe">
+          <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+          <p data-i18n="paraguay-card1">
+            1539-pe oñemombe’u peteĩ ñorairõ Asunción-pe, ha San Blas ojehecha
+            oñangarekóva tavayguakuérape.
+          </p>
+        </div>
+        <div class="card-luxe">
+          <div class="card-icon"><i class="fas fa-dove"></i></div>
+          <p data-i18n="paraguay-card2">
+            Peteĩ kuimba’e ao morotĩ rehegua ojekuaa muralla ári, ha umi
+            atacante okyhyje ha oheka.
+          </p>
+        </div>
+        <div class="card-luxe">
+          <div class="card-icon"><i class="fas fa-church"></i></div>
+          <p data-i18n="paraguay-card3">
+            Peteĩ guyra osapukái “Blas”, ha umi tapicha ohechakuaa ha’eha
+            ñangareko marangatu.
+          </p>
+        </div>
+      </div>
+      <div class="quote-gold" style="border-left-color: #b03a2e">
+        <i class="fas fa-feather-alt"></i>
+        <span data-i18n="paraguay-quote"
+          >"Ha’e ñande joguaha yvytu poty, oipytyvõva opa mba’e asy"</span
+        >
+      </div>
+    </section>
+
+    <!-- SECCIÓN TRADICIÓN -->
+    <section id="tradicion" class="section fade-scroll">
+      <h2 class="section-title" data-i18n="tradicion-title">
+        Teko ha Jepokuaa · Creencias vivas
+      </h2>
+      <div class="grid-sublime">
+        <div class="card-luxe">
+          <div class="card-icon"><i class="fas fa-ribbon"></i></div>
+          <p>
+            <strong data-i18n="tradicion-card1strong">3 jasypokõi</strong>
+            <span data-i18n="tradicion-card1"
+              >— umi tapicha ogueru cinta pytã oñeñapytĩ hag̃ua ijajúre
+              ñangarekorã.</span
+            >
+          </p>
+        </div>
+        <div class="card-luxe">
+          <div class="card-icon"><i class="fas fa-utensils"></i></div>
+          <p data-i18n="tradicion-card2">
+            Karu guasu ojapo umi familia ohupyty rire peteĩ milagro ha ome’ẽ
+            tembi’u maymávape.
+          </p>
+        </div>
+        <div class="card-luxe">
+          <div class="card-icon"><i class="fas fa-guitar"></i></div>
+          <p data-i18n="tradicion-card3">
+            Purahéi ha jeroky oiko San Blas ára, ko’ýte bandita ha galopera
+            reheve.
+          </p>
+        </div>
+      </div>
+      <div
+        style="display: flex; justify-content: center; margin: 2rem 0 0.5rem"
+      >
+        <div
+          style="
+            background: #1b1f26;
+            border-radius: 80px;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.85rem;
+          "
+        >
+          ✦
+          <span data-i18n="tradicion-footer"
+            >Cinta pytã ha’e ñangareko rysýi</span
+          >
+          ✦
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        <i class="fas fa-heart"></i>
+        <span data-i18n="footer1"
+          >Ojapo hag̃ua Paraguay-pe — Fe y tradición</span
+        >
+        <i class="fas fa-feather-alt"></i>
+      </p>
+      <p style="font-size: 0.7rem; margin-top: 0.5rem" data-i18n="footer2">
+        San Blas — 3 jasypokõi, tajy morotĩ rovápe · Narración oral para todos
+      </p>
+    </footer>
+
+    <div class="go-top" id="goTopBtn">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

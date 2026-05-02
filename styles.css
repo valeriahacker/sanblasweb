@@ -1,0 +1,423 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --rojo-profundo: #8b1e1e;
+        --rojo-oscuro: #631111;
+        --oro-sagrado: #d4af37;
+        --oro-quemado: #c99f2c;
+        --carbon-fondo: #0e0f12;
+        --gris-pizarra: #181b20;
+        --gris-card: #1f2329;
+        --texto-principal: #f2eee9;
+        --texto-suave: #cbc6bc;
+        --borde-dorado: rgba(212, 175, 55, 0.25);
+      }
+
+      body {
+        background: var(--carbon-fondo);
+        color: var(--texto-principal);
+        font-family: "Inter", sans-serif;
+        line-height: 1.5;
+        scroll-behavior: smooth;
+      }
+
+      /* Navegación refinada */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 12, 16, 0.9);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--borde-dorado);
+        z-index: 1200;
+        padding: 0.9rem 2rem;
+        transition: 0.25s;
+      }
+
+      .nav-container {
+        max-width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .navbar a {
+        color: var(--texto-principal);
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        letter-spacing: 0.4px;
+        padding: 0.4rem 0;
+        transition: 0.25s;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .navbar a i {
+        font-size: 0.8rem;
+        color: var(--oro-sagrado);
+      }
+
+      .navbar a::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background: var(--oro-sagrado);
+        transition: 0.3s ease;
+      }
+
+      .navbar a:hover::after,
+      .navbar a.active::after {
+        width: 100%;
+      }
+
+      .navbar a:hover {
+        color: var(--oro-sagrado);
+      }
+
+      /* Selector de idioma elegante */
+      .lang-switch {
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 60px;
+        padding: 0.25rem 0.8rem;
+        display: flex;
+        gap: 0.7rem;
+        margin-left: 1rem;
+        border: 1px solid var(--borde-dorado);
+        backdrop-filter: blur(4px);
+      }
+      .lang-btn {
+        background: transparent;
+        border: none;
+        color: var(--texto-suave);
+        font-weight: 600;
+        font-size: 0.75rem;
+        cursor: pointer;
+        padding: 0.3rem 0.5rem;
+        border-radius: 30px;
+        transition: 0.2s;
+        font-family: "Inter", monospace;
+      }
+      .lang-btn.active {
+        background: var(--oro-sagrado);
+        color: #0a0b0e;
+        box-shadow: 0 0 6px gold;
+      }
+      .lang-btn:hover:not(.active) {
+        color: var(--oro-sagrado);
+      }
+
+      /* HERO - Mejorado, sobrio y devocional */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        background:
+          linear-gradient(
+            145deg,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(30, 20, 10, 0.9) 100%
+          ),
+          url("img/sanblas.webp");
+        background-size: cover;
+        background-position: center 25%;
+        background-attachment: fixed;
+        padding: 2rem;
+      }
+
+      .hero-content {
+        max-width: 880px;
+        z-index: 3;
+        animation: fadeUpSmooth 1.2s ease-out;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.2rem, 12vw, 6rem);
+        font-weight: 800;
+        font-family: "Cormorant Garamond", serif;
+        background: linear-gradient(135deg, #f5c542, #dbaa2a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        letter-spacing: -0.02em;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero .sub {
+        font-size: clamp(1rem, 4vw, 1.4rem);
+        font-weight: 400;
+        border-top: 2px solid var(--oro-sagrado);
+        display: inline-block;
+        padding-top: 0.8rem;
+        color: #f3ecd9;
+        backdrop-filter: blur(3px);
+        margin-bottom: 2rem;
+      }
+
+      /* Audio principal - refinado, minimal sagrado */
+      .audio-sacred {
+        background: rgba(0, 0, 0, 0.65);
+        backdrop-filter: blur(16px);
+        border-radius: 2rem;
+        padding: 1.5rem 2rem;
+        margin: 2rem auto 1rem;
+        border: 1px solid rgba(212, 175, 55, 0.5);
+        transition: all 0.3s;
+        max-width: 600px;
+      }
+
+      .audio-sacred:hover {
+        border-color: var(--oro-sagrado);
+        box-shadow: 0 0 18px rgba(212, 175, 55, 0.2);
+      }
+
+      .audio-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: var(--oro-sagrado);
+      }
+
+      .audio-label i {
+        font-size: 1.5rem;
+      }
+
+      .audio-sacred p {
+        font-size: 0.9rem;
+        color: #ddd2bd;
+        margin-bottom: 1rem;
+      }
+
+      audio {
+        width: 100%;
+        border-radius: 100px;
+        filter: drop-shadow(0 2px 6px black);
+      }
+
+      .ribbon-symbol {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 40px;
+        padding: 0.3rem 1rem;
+        margin-top: 1.2rem;
+        font-size: 0.8rem;
+      }
+      .ribbon-symbol span {
+        width: 20px;
+        height: 20px;
+        background: #b03a2e;
+        border-radius: 4px;
+      }
+
+      /* SECCIONES GENERALES */
+      .section {
+        padding: 5rem 1.8rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        font-family: "Cormorant Garamond", serif;
+        color: var(--oro-sagrado);
+        margin-bottom: 2.5rem;
+        position: relative;
+        display: inline-block;
+        letter-spacing: -0.3px;
+      }
+
+      .section-title:after {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        width: 70px;
+        height: 3px;
+        background: var(--rojo-profundo);
+        border-radius: 3px;
+      }
+
+      .grid-sublime {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 1.2rem;
+      }
+
+      .card-luxe {
+        background: var(--gris-card);
+        border-radius: 2rem;
+        padding: 1.8rem;
+        transition: 0.35s cubic-bezier(0.2, 0.8, 0.4, 1);
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        box-shadow: 0 12px 20px -10px rgba(0, 0, 0, 0.5);
+      }
+
+      .card-luxe:hover {
+        transform: translateY(-6px);
+        border-color: rgba(212, 175, 55, 0.5);
+        background: #242a33;
+      }
+
+      .card-icon {
+        font-size: 2rem;
+        color: var(--oro-sagrado);
+        margin-bottom: 1rem;
+      }
+
+      .card-luxe p {
+        color: var(--texto-suave);
+        line-height: 1.6;
+      }
+
+      .quote-gold {
+        background: linear-gradient(115deg, #181d24, #111419);
+        border-radius: 1.8rem;
+        padding: 1.8rem;
+        margin-top: 2rem;
+        border-left: 6px solid var(--oro-sagrado);
+        font-style: italic;
+      }
+
+      footer {
+        background: #07090c;
+        text-align: center;
+        padding: 2.5rem 1rem;
+        border-top: 1px solid var(--borde-dorado);
+        font-size: 0.85rem;
+      }
+      footer i {
+        color: var(--oro-sagrado);
+      }
+
+      /* Botón ir arriba */
+      .go-top {
+        position: fixed;
+        bottom: 22px;
+        right: 22px;
+        background: var(--rojo-profundo);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.3rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s;
+        cursor: pointer;
+        z-index: 99;
+        border: none;
+        box-shadow: 0 4px 12px black;
+      }
+      .go-top.show-btn {
+        opacity: 1;
+        visibility: visible;
+      }
+      .go-top:hover {
+        background: var(--oro-sagrado);
+        color: #0a0b0e;
+        transform: scale(1.05);
+      }
+
+      .navbar {
+        transition:
+          background 0.3s ease,
+          backdrop-filter 0.3s ease;
+      }
+
+      .navbar.transparent {
+        background: rgba(10, 12, 16, 0.2);
+        backdrop-filter: blur(5px);
+        border-bottom-color: rgba(212, 175, 55, 0.15);
+      }
+
+      .navbar.solid {
+        background: rgba(10, 12, 16, 0.95);
+        backdrop-filter: blur(14px);
+        border-bottom-color: var(--borde-dorado);
+      }
+
+      /* animaciones */
+      @keyframes fadeUpSmooth {
+        from {
+          opacity: 0;
+          transform: translateY(35px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .fade-scroll {
+        opacity: 0;
+        transform: translateY(35px);
+        transition:
+          opacity 0.8s ease,
+          transform 0.7s ease;
+      }
+      .fade-scroll.revealed {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 780px) {
+        .navbar {
+          padding: 0.7rem 1rem;
+        }
+        .nav-container {
+          gap: 1.2rem;
+        }
+        .lang-switch {
+          margin-left: 0;
+          padding: 0.2rem 0.6rem;
+        }
+        .section {
+          padding: 3rem 1.2rem;
+        }
+        .section-title {
+          font-size: 1.9rem;
+        }
+        .hero {
+          background-attachment: scroll;
+        }
+        .audio-sacred {
+          padding: 1.2rem;
+        }
+      }
+
+      @media (max-width: 550px) {
+        .nav-container a span {
+          font-size: 0.7rem;
+        }
+        .lang-btn {
+          font-size: 0.65rem;
+        }
+      }
